@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DetailActivity"
+    tools:showIn="@layout/activity_detail"
+    app:layoutDescription="@xml/detail_motion">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="DOWNLOAD DETAILS"
+        android:textSize="36sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_repo_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Repository Name"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/tv_repo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        tools:text="GITHUB" />
+
+    <TextView
+        android:id="@+id/tv_status_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Download Status"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/tv_download_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:alpha="0"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        tools:text="Success" />
+
+    <Button
+        android:id="@+id/btn_return"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:padding="16dp"
+        android:textSize="24sp"
+        android:text="RETURN"
+        android:textColor="@color/white"/>
+</androidx.constraintlayout.motion.widget.MotionLayout>

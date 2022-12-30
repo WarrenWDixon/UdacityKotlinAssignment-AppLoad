@@ -1,0 +1,180 @@
+<MotionScene xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <!-- A transition describes an animation via start and end state -->
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="5000">
+
+    </Transition>
+
+    <!-- Constraints to apply at the start of the animation -->
+    <ConstraintSet android:id="@+id/start">
+        <!-- <Constraint
+            android:id="@id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            app:background="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/> -->
+
+        <Constraint
+            android:id="@+id/tv_title"
+            android:alpha="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+        <Constraint
+            android:id="@+id/tv_repo_lbl"
+            android:alpha="0"
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <Constraint
+            android:id="@+id/tv_repo_name"
+            android:alpha="0"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_lbl"
+            app:layout_constraintVertical_bias="0.382"
+            tools:text="GITHUB" />
+
+        <Constraint
+            android:id="@+id/tv_status_lbl"
+            android:alpha="0"
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_name"/>
+
+
+        <Constraint
+            android:id="@+id/tv_download_status"
+            android:alpha="0"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_status_lbl"
+            tools:text="Success" />
+
+        <Constraint
+            android:id="@+id/btn_return"
+            android:alpha="0"
+            android:layout_marginBottom="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </ConstraintSet>
+
+    <!-- Constraints to apply at the end of the animation -->
+    <ConstraintSet android:id="@+id/end">
+        <!--<Constraint
+            android:id="@id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            app:background="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/> -->
+
+        <Constraint
+            android:id="@+id/tv_title"
+            android:alpha="1"
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+        <Constraint
+            android:id="@+id/tv_repo_lbl"
+            android:alpha="1"
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <Constraint
+            android:id="@+id/tv_repo_name"
+            android:alpha="1"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_lbl"
+            app:layout_constraintVertical_bias="0.382"
+            tools:text="GITHUB" />
+
+        <Constraint
+            android:id="@+id/tv_status_lbl"
+            android:alpha="1"
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_name"/>
+
+
+        <Constraint
+            android:id="@+id/tv_download_status"
+            android:alpha="1"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_status_lbl"
+            tools:text="Success" />
+
+        <Constraint
+            android:id="@+id/btn_return"
+            android:alpha="1"
+            android:layout_marginBottom="32dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </ConstraintSet>
+</MotionScene>
